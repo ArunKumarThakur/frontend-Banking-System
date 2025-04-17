@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register yourself</title>
+    <link rel="stylesheet" href="/BankingSystemUIUX/css/register.css">
+</head>
+
+<body>
+    <header class="container header-section">
+        <div class="title">
+            <h2>Register yourself</h2>
+        </div>
+
+        <div class="header-main">
+
+            <div class="header-main">
+                <div class="header-left-part">
+                    <form id="userForm" >
+                        <div class="form-group">
+                            <label for="userName">Username</label>
+                            <input type="text" id="userName" name="userName" placeholder="Enter your username" required
+                                aria-describedby="usernameHelp">
+                            <small id="usernameHelp">Use 4-20 characters (letters, numbers, _)</small>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}"
+                                required aria-describedby="dobHelp">
+                            <small id="dobHelp">Format: YYYY-MM-DD</small>
+                        </div>
+            
+                        <button type="submit" class="submit-btn" >Submit</button>
+                    </form>
+                </div>
+                <div class="header-right-part">
+                    <img src="/BankingSystemUIUX/image/signup.png" alt="Signup illustration">
+                </div>
+            </div>
+    </header>
+    <script src="/BankingSystemUIUX/js/register.js"></script>
+</body>
+
+</html>
