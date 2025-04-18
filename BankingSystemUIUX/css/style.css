@@ -32,7 +32,7 @@ body {
 }
 
 .header-section {
-    width: calc(100% - 80px); /* Accounts for 40px margin on both sides */
+    width: calc(100%); /* Accounts for 40px margin on both sides */
     height: 5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
     display: flex;
@@ -46,10 +46,10 @@ body {
 }
 
 .navbar-right-part {
-    /* height: 100%; */
     flex: 1; /* Takes 50% */
     display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
+    justify-content: flex-end; 
+    padding-right: 50px;
 }
 
 .navbar-list {
@@ -65,7 +65,6 @@ body {
 
 .navbar-list a {
     text-decoration: none;
-    /* color: #333; */
     color: #000;
     font-weight: 500;
     padding: 0.5rem 0;
@@ -107,7 +106,7 @@ body {
 .navbar-right-part .buttons {
     display: flex;
     gap: 30px; /* Space between buttons */
-    padding-right: 50px;
+    /* padding-right: 50px; */
 }
 
 /* button style throughout the page */
@@ -121,16 +120,13 @@ body {
     -o-border-radius: 4px;
     background: #bdcbef;
     cursor: pointer;
+    transition: 0.5s all linear;
 }
 
 .btn:hover{
-    transition: 0.5s all linear;
+    
     background-color: #fff;
     border-color: #275adc;
-    -webkit-transition: 0.5s all ease-in-out;
-    -moz-transition: 0.5s all linear;
-    -ms-transition: 0.5s all linear;
-    -o-transition: 0.5s all linear;
     scale: 1.01;
     overflow: hidden;
 }

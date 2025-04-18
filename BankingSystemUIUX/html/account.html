@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account opening</title>
+    <link rel="stylesheet" href="/BankingSystemUIUX/css/account.css">
+</head>
+<body>
+    <header class="container header-section">
+        <div class="title">
+            <h2>Open your Account</h2>
+        </div>
+
+        <div class="header-main">
+
+            <div class="header-main">
+                <div class="header-left-part">
+                    <form id="userForm" >
+                        <div class="form-group">
+                            <label for="userName">balance</label>
+                            <input type="number" id="userName" name="userName" placeholder="opening balance" required
+                                aria-describedby="usernameHelp">
+                            <small id="usernameHelp">Use 4-20 characters (letters, numbers, _)</small>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="dob">customerId</label>
+                            <input type="text" id="dob" name="dob" placeholder="CUSXXX">
+                            <small id="dobHelp">Format: YYYY-MM-DD</small>
+                        </div>
+            
+                        <button type="submit" class="submit-btn" >Submit</button>
+                    </form>
+                </div>
+                <div class="header-right-part">
+                    <img src="/BankingSystemUIUX/image/signup.png" alt="Signup illustration">
+                </div>
+            </div>
+    </header>
+    <script src="/BankingSystemUIUX/js/account.js"></script>
+</body>
+</html>

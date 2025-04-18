@@ -1,20 +1,22 @@
 const username = document.getElementById("userName");
 const dobInput = document.getElementById("dob"); // Renamed to avoid conflict
 const form = document.getElementById("userForm");
-let count = 105;
+
+
+
 async function register() {
     try {
-    let  customerId = "CUS"+(count++);
         const customerName = username.value.trim(); // Added 'const'
         const dobValue = dobInput.value.trim();    // Changed variable name
         
         const data = {
-            "customerId": customerId,
-            "customerName": customerName,
-            "dob": dobValue
+            "balance" : customerName,
+            "customer" : {
+                "customerId" : dobValue
+            }
         };
         
-        const response = await fetch("http://localhost:8080/customers/save", {
+        const response = await fetch("http://localhost:8080/accounts/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -27,7 +29,7 @@ async function register() {
             throw new Error(`Server error: ${response.status} - ${errorText}`);
         }
 
-        alert("Register success");
+        alert("Account open successfully");
         form.reset(); // Clear the form after successful registration
         return true;
     } catch (error) {
@@ -36,6 +38,12 @@ async function register() {
         return false;
     }
 }
+
+
+
+// form.addEventListener("submit", function(e) {
+//     help();
+// })
 
 document.getElementById("userForm").addEventListener("submit", async function(e) {
     e.preventDefault();
