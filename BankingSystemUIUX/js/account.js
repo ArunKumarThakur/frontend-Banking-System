@@ -1,18 +1,24 @@
-const username = document.getElementById("userName");
-const dobInput = document.getElementById("dob"); // Renamed to avoid conflict
+const balance = document.getElementById("balance");
+const id = document.getElementById("id"); // Renamed to avoid conflict
 const form = document.getElementById("userForm");
 
 
 
 async function register() {
     try {
-        const customerName = username.value.trim(); // Added 'const'
-        const dobValue = dobInput.value.trim();    // Changed variable name
+        const amount = balance.value.trim(); 
+
+        if(amount < 500) {
+            form.reset();
+            alert("Minimum amount should be 500");
+            return;
+        }
+        const customerId = id.value.trim();   
         
         const data = {
-            "balance" : customerName,
+            "balance" : amount,
             "customer" : {
-                "customerId" : dobValue
+                "customerId" : customerId
             }
         };
         
@@ -30,20 +36,18 @@ async function register() {
         }
 
         alert("Account open successfully");
-        form.reset(); // Clear the form after successful registration
+        form.reset(); 
         return true;
     } catch (error) {
         console.error("Registration error:", error);
-        alert("Registration failed: " + error.message);
+        alert("Account openeing failed: " + error.message);
         return false;
     }
 }
 
 
 
-// form.addEventListener("submit", function(e) {
-//     help();
-// })
+
 
 document.getElementById("userForm").addEventListener("submit", async function(e) {
     e.preventDefault();

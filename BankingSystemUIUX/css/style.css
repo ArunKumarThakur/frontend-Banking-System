@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -22,7 +23,7 @@ body {
     background-attachment: fixed; /* Keeps background fixed during scroll */
     background-size: cover;
     min-height: 100vh;
-    background: linear-gradient(to top right, #7091E6, #EDE8E5);
+    background: linear-gradient(to top right, #7091E6, #ffffff00);
     background-attachment: fixed;
 }
 
@@ -155,7 +156,7 @@ body {
 
 .hero-left-part .desc{
     font-size: 15px;
-    color: rgb(102, 102, 102);
+    color: rgb(48, 47, 47);
     margin-bottom: 13px;
 }
 

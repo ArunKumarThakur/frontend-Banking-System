@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account opening</title>
     <link rel="stylesheet" href="/BankingSystemUIUX/css/account.css">
 </head>
+
 <body>
-    <header class="container header-section">
+
+    <header class="header-section ">
+        <div class="navbar-left-part">
+            <ul class="navbar-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Know your balance</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right-part">
+            <div class="buttons">
+                <a href="#"><button class="btn">Signup</button></a>
+                <a href="#"><button class="btn">Signin</button></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container hero-section">
         <div class="title">
             <h2>Open your Account</h2>
         </div>
 
-        <div class="header-main">
+        <div class="hero-main">
 
-            <div class="header-main">
-                <div class="header-left-part">
-                    <form id="userForm" >
+            <div class="hero-main">
+                <div class="hero-left-part">
+                    <form id="userForm">
                         <div class="form-group">
-                            <label for="userName">balance</label>
-                            <input type="number" id="userName" name="userName" placeholder="opening balance" required
+                            <label for="balance">balance <span class="important">*</span></label>
+                            <input type="number" id="balance" name="balance" placeholder="opening balance" required
                                 aria-describedby="usernameHelp">
-                            <small id="usernameHelp">Use 4-20 characters (letters, numbers, _)</small>
+                            <small id="usernameHelp">minimum 500</small>
                         </div>
-            
+
                         <div class="form-group">
-                            <label for="dob">customerId</label>
-                            <input type="text" id="dob" name="dob" placeholder="CUSXXX">
-                            <small id="dobHelp">Format: YYYY-MM-DD</small>
+                            <label for="id">customerId <span class="important">*</span></label>
+                            <input type="text" id="id" name="id" placeholder="CUSXXX">
+                            <small id="dobHelp">CUS***</small>
                         </div>
-            
-                        <button type="submit" class="submit-btn" >Submit</button>
+
+                        <button type="submit" class="submit-btn">Submit</button>
                     </form>
                 </div>
-                <div class="header-right-part">
+                <div class="hero-right-part">
                     <img src="/BankingSystemUIUX/image/signup.png" alt="Signup illustration">
                 </div>
             </div>
-    </header>
+        </div>
+    </section>
     <script src="/BankingSystemUIUX/js/account.js"></script>
 </body>
+
 </html>
